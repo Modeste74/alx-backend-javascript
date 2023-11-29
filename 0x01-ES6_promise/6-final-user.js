@@ -10,8 +10,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         status: result.status,
         value: result.status === 'fulfilled' ? result.value : result.reason,
       }))
-    ))
-    // eslint-disable-next-line
-    .catch((error) => ({
-    }));
+    ));
 }
