@@ -4,12 +4,12 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 rl.question('Welcome to Holberton School, what is your name?\n', (answer) => {
-  console.log(`Your name is: ${answer}`);
+  process.stdout.write(`Your name is: ${answer}\n`);
   rl.close();
 });
 if (!process.stdin.isTTY) {
   process.stdin.on('data', (data) => {
     const input = data.toString().trim();
-    console.log('This important software is now closing');
+    process.stdout.write('This important software is now closing\n');
   });
 }
