@@ -14,7 +14,7 @@ function countStudents (path) {
 	  .filter(Boolean);
 	console.log(`Number of students in ${fieldName}: ${fieldData.length}. List: ${fieldData.join(', ')}`);
       }
-      resolve(`Data processed successfully`);
+      resolve();
     } catch (error) {
       reject(new Error('Cannot load the database'));
     }
