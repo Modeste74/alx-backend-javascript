@@ -23,8 +23,13 @@ describe('calculateNumber function', () => {
     assert.strictEqual(result, 14);
   });
 
-  it('should round and a decimal and whole number', () => {
+  it('should round and add a decimal to a whole number', () => {
     const result = calculateNumber(2.5, 7);
     assert.strictEqual(result, 10);
+  });
+
+  it('should round and add a zero to another zero', () => {
+    const result = calculateNumber(0, 0);
+    assert.strictEqual(result, 0);
   });
 });
